@@ -1,11 +1,12 @@
+%define rel alpha
 Summary:	Hex editor wxHeXEditor
 Summary(pl.UTF-8):	Hex edytor wxHexEditor
 Name:		wxHexEditor
 Version:	0.07
-Release:	1
+Release:	0.%{rel}.1
 License:	GPL v2
 Group:		X11/Applications/Editors
-Source0:	http://dl.sourceforge.net/project/wxhexeditor/wxHexEditor/v0.07%20Alpha/%{name}-v%{version}_alpha-src.tar.bz2
+Source0:	http://dl.sourceforge.net/project/wxhexeditor/wxHexEditor/v0.07%20Alpha/%{name}-v%{version}_%{rel}-src.tar.bz2
 # Source0-md5:	f93821aa23f72aa28ed0b5869591fc1e
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-build.patch
