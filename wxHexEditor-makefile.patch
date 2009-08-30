@@ -1,0 +1,11 @@
+--- wxHexEditor/makefile.orig	2009-02-22 03:11:04.000000000 +0100
++++ wxHexEditor/makefile	2009-08-30 13:17:49.000000000 +0200
+@@ -1,6 +1,6 @@
+-WXCONFIG = wx-config
++WXCONFIG = wx-gtk2-unicode-config
+ CPP = `$(WXCONFIG) --cxx`
+-CXXFLAGS= `$(WXCONFIG) --cxxflags` -c -O3
++CXXFLAGS= `$(WXCONFIG) --cxxflags` -c
+ LDFLAGS = `$(WXCONFIG) --libs`
+ 
+ SOURCES= HexEditorGui.cpp FileDifference.cpp HexDialogs.cpp HexEditorApp.cpp HexEditor.cpp HexEditorCtrl/HexEditorCtrl.cpp HexEditorCtrl/wxHexCtrl/TagDialogGui.cpp HexEditorCtrl/wxHexCtrl/wxHexCtrl.cpp HexEditorCtrl/wxHexCtrl/Tag.cpp HexEditorCtrl/HexEditorCtrlGui.cpp HexEditorFrame.cpp
