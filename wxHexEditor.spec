@@ -7,7 +7,7 @@ Version:	0.22
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Editors
-Source0:	http://dl.sourceforge.net/project/wxhexeditor/wxHexEditor/v0.07%20Alpha/%{name}-v%{version}_%{rel}-src.tar.bz2
+Source0:	wget http://downloads.sourceforge.net/wxhexeditor/wxHexEditor/v0.22%20Beta/%{name}-v%{version}-src.tar.bz2
 # Source0-md5:	eb88cfcda0553e23a2a9490197e18552
 URL:		http://wxhexeditor.sourceforge.net/
 BuildRequires:	autoconf
