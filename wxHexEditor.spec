@@ -27,7 +27,7 @@ binary files.
 wxHexEditor to kolejny edytor szesnastkowy, stworzony ponieważ nie ma
 dobrych edytorów dla systemu Linux, szczególnie dla dużych plików.
 Wspiera pliki do rozmiaru 2^64 bajtów i urządzenia blokowe. Został
-dostoswany do reverse engineringu plików binarnych.
+dostosowany do reverse engineringu plików binarnych.
 
 %prep
 %setup -q -n %{name}
