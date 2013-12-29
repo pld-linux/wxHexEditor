@@ -50,6 +50,7 @@ cd ..
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
+	PREFIX=%{_prefix} \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
