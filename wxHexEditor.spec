@@ -12,7 +12,6 @@ Source0:	http://downloads.sourceforge.net/wxhexeditor/wxHexEditor/v0.22%20Beta/%
 URL:		http://wxhexeditor.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtoolize
 BuildRequires:	mhash-devel
 BuildRequires:	wxGTK2-unicode-devel >= 2.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
