@@ -4,7 +4,7 @@ Summary:	Hex editor wxHeXEditor
 Summary(pl.UTF-8):	Hex edytor wxHexEditor
 Name:		wxHexEditor
 Version:	0.22
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Editors
 Source0:	http://downloads.sourceforge.net/wxhexeditor/wxHexEditor/v0.22%20Beta/%{name}-v%{version}-src.tar.bz2
