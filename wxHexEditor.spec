@@ -4,11 +4,12 @@ Summary:	Hex editor wxHeXEditor
 Summary(pl.UTF-8):	Hex edytor wxHexEditor
 Name:		wxHexEditor
 Version:	0.22
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications/Editors
 Source0:	http://downloads.sourceforge.net/wxhexeditor/wxHexEditor/v0.22%20Beta/%{name}-v%{version}-src.tar.bz2
 # Source0-md5:	eb88cfcda0553e23a2a9490197e18552
+Patch0:		wxWidgets3.patch
 URL:		http://wxhexeditor.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -30,6 +31,7 @@ dostosowany do reverse engineringu plików binarnych.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 cd udis86

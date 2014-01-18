@@ -1,0 +1,11 @@
+--- wxHexEditor/Makefile~	2014-01-18 16:45:00.000000000 +0100
++++ wxHexEditor/Makefile	2014-01-18 16:45:15.795451816 +0100
+@@ -4,7 +4,7 @@
+ CFLAGS = -O2
+ CXXFLAGS = -O2
+ WXCXXFLAGS= `$(WXCONFIG) --cxxflags` -Iudis86 -Imhash/include -MMD -O2 -c ${OPTFLAGS}
+-WXLDFLAGS = `$(WXCONFIG) --libs`
++WXLDFLAGS = `$(WXCONFIG) --libs` -lwx_gtk2u_aui-3.0
+ RC = `$(WXCONFIG) --rescomp`
+ #RC = x86_64-w64-mingw32-windres --define WX_CPU_AMD64
+ RCFLAGS = `$(WXCONFIG) --cxxflags | sed s/' '-m.*//g;`
