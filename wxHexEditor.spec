@@ -4,7 +4,7 @@ Summary:	Hex editor wxHeXEditor
 Summary(pl.UTF-8):	Hex edytor wxHexEditor
 Name:		wxHexEditor
 Version:	0.24
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Editors
 Source0:	http://downloads.sourceforge.net/wxhexeditor/wxHexEditor/v0.24%20Beta/%{name}-v%{version}-src.tar.xz
@@ -56,6 +56,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	PREFIX=%{_prefix} \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/hu{_HU,}
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/ja{_JP,}
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/nl{_NL,}
 
 %find_lang %{name}
 
