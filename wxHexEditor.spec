@@ -1,20 +1,20 @@
-# TODO: package and switch to system-wide udis86
+# TODO: switch to system-wide udis86
 #
 Summary:	Hex editor wxHeXEditor
 Summary(pl.UTF-8):	Hex edytor wxHexEditor
 Name:		wxHexEditor
-Version:	0.22
-Release:	4
+Version:	0.24
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Editors
-Source0:	http://downloads.sourceforge.net/wxhexeditor/wxHexEditor/v0.22%20Beta/%{name}-v%{version}-src.tar.bz2
-# Source0-md5:	eb88cfcda0553e23a2a9490197e18552
+Source0:	http://downloads.sourceforge.net/wxhexeditor/wxHexEditor/v0.24%20Beta/%{name}-v%{version}-src.tar.xz
+# Source0-md5:	6e54b7e640bf5296137b765488ec78a6
 Patch0:		wxWidgets3.patch
-URL:		http://wxhexeditor.sourceforge.net/
+URL:		http://www.wxhexeditor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	mhash-devel
-BuildRequires:	wxGTK2-unicode-devel >= 2.8
+BuildRequires:	wxGTK3-unicode-devel >= 2.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,8 +35,10 @@ dostosowany do reverse engineringu plików binarnych.
 
 %build
 cd udis86
-%{__aclocal} -I m4
+mkdir -p build/m4
+%{__aclocal} -I build/m4
 %{__autoconf}
+%{__libtoolize}
 %{__autoheader}
 %{__automake}
 %configure
@@ -44,7 +46,7 @@ cd udis86
 cd ..
 
 %{__make} \
-	WXCONFIG=wx-gtk2-unicode-config \
+	WXCONFIG=wx-gtk3-unicode-config \
 	LIBS='udis86/libudis86/.libs/libudis86.a -lmhash' \
 	CXXFLAGS="%{rpmcxxflags}"
 
